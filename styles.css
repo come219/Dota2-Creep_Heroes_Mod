@@ -1,0 +1,92 @@
+/* styles.css */
+
+/* General body styling for dark mode */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #333;
+}
+
+/* Main content styling */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Card-like styling for page sections */
+main h2 {
+    font-size: 2rem;
+    color: #ff9800;
+}
+
+main p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #bdbdbd;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1e1e1e;
+    color: #bdbdbd;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 2px solid #333;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Buttons and hover effects */
+button, nav a {
+    background-color: #ff9800;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, nav a:hover {
+    background-color: #ffa726;
+    color: #fff;
+}
