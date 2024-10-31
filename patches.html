@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2 Creep Heroes Mod - Patch Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="heroes.html">Heroes</a>
+            <a href="community.html">Community</a>
+            <a href="maps.html">Maps</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="patches.html">Patches</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Patch Notes - Dota 2 Mod: Heroes Replaced with Creeps</h1>
+            <p>Welcome to the patch notes for the Dota 2 mod where "Heroes Are Replaced with Creeps." Select a patch version below to explore updates, features, and balance changes.</p>
+
+            <label for="patch-selector">Select Patch Version:</label>
+            <select id="patch-selector" onchange="showPatchNotes(this.value)">
+                <option value="none">Select a Version...</option>
+                <option value="v0.8.98.7">Version 0.8.98.7 - 30/10/24</option>
+                <option value="v0.8.90">Version 0.8.90</option>
+                <option value="v0.8.88">Version 0.8.88</option>
+                <!-- Add more versions as needed -->
+            </select>
+
+            <div id="patch-notes">
+                <h2>Patch Details</h2>
+                <p>Select a patch version to view the details.</p>
+            </div>
+        </section>
+
+        <section id="backlog">
+            <h2>Upcoming Features & Backlog</h2>
+            <ul>
+                <li>v 0.90 - 'Balancing & QOL'</li>
+                <li>v 0.95 - 'Visuals Update?'</li>
+                <li>v 1.00 - 'No Errors & Real Games Played'</li>
+                <li>v 1.10 - 'Facets & Innates Fixed'</li>
+                <li>v 1.20 - 'Leaderboards & MMR'</li>
+                <li>v 1.30 - 'New Items, Heroes, Abilities Impl.'</li>
+                <li>v 1.40 - 'New 6v6 Map Impl.'</li>
+                <li>v 1.50 - 'Overthrow Map Impl.'</li>
+                <li>v 1.55 - '12v12 Map Impl.'</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 219 Studios</p>
+        <p><a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script>
+        function showPatchNotes(version) {
+            const patchNotes = {
+                "v0.8.98.7": `
+                    <h3>Version 0.8.98.7 - 30/10/24</h3>
+                    <p>A Dota 2 custom gamemode mod where "Heroes Are Replaced With Creeps".</p>
+                    <ul>
+                        <li>Control as Neutral Creeps, Lane Creeps, Summons, or Boss Monsters like Roshan.</li>
+                        <li>Experience new abilities, dynamic matchups, and Dota 2 items with creeps.</li>
+                        <li>Hero units without mana to match some neutral creeps’ abilities.</li>
+                        <li>Utilizing items and spells specific to creeps, including Roshan's, Yearbeast's, and Tormentor's abilities.</li>
+                        <li>All neutral items enabled!</li>
+                        <li>Current stage: In-development, balancing in progress.</li>
+                    </ul>
+                `,
+                "v0.8.90": `
+                    <h3>Version 0.8.90 - Latest Balance Push</h3>
+                    <ul>
+                        <li>General balance updates on base stats and abilities.</li>
+                        <li>Hero base stat adjustments and projectile updates.</li>
+                        <li>New tactical options for melee and ranged creep controls.</li>
+                    </ul>
+                `,
+                "v0.8.88": `
+                    <h3>Version 0.8.88 - Description and Balances</h3>
+                    <ul>
+                        <li>Improved creep descriptions and abilities documentation.</li>
+                        <li>Adjusted level progression for balanced gameplay.</li>
+                    </ul>
+                `
+                // Add more versions as needed
+            };
+
+            document.getElementById('patch-notes').innerHTML = patchNotes[version] || '<p>Select a valid patch version.</p>';
+        }
+    </script>
+</body>
+</html>

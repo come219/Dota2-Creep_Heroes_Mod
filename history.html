@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match History - Dota 2 Creep Heroes Mod</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="heroes.html">Heroes</a>
+            <a href="community.html">Community</a>
+            <a href="maps.html">Maps</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="match_history.html">Match History</a>
+            <a href="patches.html">Patches</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Match History</h1>
+            <p>Review your recent matches to see your performance, MMR changes, and results.</p>
+
+            <!-- Match History Table -->
+            <div class="match-history">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Match ID</th>
+                            <th>Mode</th>
+                            <th>Duration</th>
+							 <th>Heroes</th>
+                            <th>Result</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>30/10/24</td>
+                            <td>1029384756</td>
+                            <td>Ranked</td>
+                            <td>32:45</td>
+							<td>ooooo - ooooo</td>
+                            <td class="win">Radiant</td>
+                        </tr>
+                        <tr>
+                            <td>29/10/24</td>
+                            <td>1028374655</td>
+                            <td>Normal</td>
+                            <td>28:10</td>
+							<td>ooooo - ooooo</td>
+                            <td class="loss">Dire</td>
+                          
+                        </tr>
+                        <tr>
+                            <td>28/10/24</td>
+                            <td>1027263544</td>
+                            <td>Ranked</td>
+                            <td>45:22</td>
+							<td>ooooo - ooooo</td>
+                            <td class="win">Radiant</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>27/10/24</td>
+                            <td>1026152433</td>
+                            <td>Ranked</td>
+                            <td>22:15</td>
+							<td>ooooo - ooooo</td>
+                            <td class="error">Not Scored</td>
+                            
+                        </tr>
+                        <!-- Additional rows can be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 219 Studios</p>
+        <p><a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <style>
+        /* Match History styling */
+        .match-history {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .match-history table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #e0e0e0;
+            font-size: 1rem;
+        }
+
+        .match-history th, .match-history td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .match-history th {
+            background-color: #ff9800;
+            color: #121212;
+        }
+
+        .match-history tr:nth-child(even) {
+            background-color: #2e2e2e;
+        }
+
+        .match-history tbody tr:hover {
+            background-color: #333;
+        }
+
+        /* Win/Loss coloring */
+        .win {
+            color: #66bb6a;
+            font-weight: bold;
+        }
+
+        .loss {
+            color: #e57373;
+            font-weight: bold;
+        }
+
+		.error {
+            color: #2222222;
+            font-weight: bold;
+        }
+
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .match-history table, .match-history tbody, .match-history tr, .match-history th, .match-history td {
+                display: block;
+                width: 100%;
+            }
+
+            .match-history th {
+                background-color: transparent;
+                font-size: 1.2rem;
+                color: #ff9800;
+            }
+
+            .match-history td {
+                text-align: left;
+                padding: 10px;
+                border-bottom: 1px solid #444;
+            }
+        }
+    </style>
+</body>
+</html>
+

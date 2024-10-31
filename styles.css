@@ -23,6 +23,7 @@ header h1 {
     margin: 0;
 }
 
+/* Navbar styling */
 nav {
     margin-top: 1rem;
 }
@@ -47,10 +48,23 @@ main {
     text-align: center;
 }
 
+/* H1 styling for dark mode */
+main h1 {
+    font-size: 2.5rem;
+    color: #ff9900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+}
+
 /* Card-like styling for page sections */
 main h2 {
     font-size: 2rem;
-    color: #ff9800;
+    color: #995B00;
+}
+
+main h3 {
+    font-size: 1rem;
+    color: #bdbdbd;
 }
 
 main p {

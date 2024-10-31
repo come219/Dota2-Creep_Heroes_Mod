@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dota 2 Creep Heroes Mod</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="heroes.html">Heroes</a>
+            <a href="community.html">Community</a>
+            <a href="maps.html">Maps</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="patches.html">Patches</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Whether you have feedback, questions, or want to get involved, reach out using the form below or through our social media channels.</p>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form action="submit_contact_form" method="post">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Additional Contact Information -->
+            <div class="contact-info">
+                <h2>Other Ways to Contact</h2>
+                <p>Email: <a href="mailto:come219pkim@gmail.com">come219pkim@gmail.com</a></p>
+                <p>Steam: <a href="https://steamcommunity.com/id/come219" target="_blank">Steam Profile</a></p>
+                <p>Social Media: 
+                    <a href="https://twitter.com/MrSoloQueue" target="_blank">Twitter</a> | 
+                    <a href="https://twitch.tv/MrSoloQueue" target="_blank">Twitch</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 219 Studios</p>
+        <p><a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <style>
+        /* Contact form styling */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ff9800;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .contact-form button {
+            display: inline-block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #ff9800;
+            color: #121212;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ffa726;
+            color: #fff;
+        }
+
+        /* Additional contact info styling */
+        .contact-info {
+            text-align: center;
+            margin-top: 2rem;
+            color: #bdbdbd;
+        }
+
+        .contact-info a {
+            color: #ff9800;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #ffa726;
+        }
+    </style>
+</body>
+</html>
