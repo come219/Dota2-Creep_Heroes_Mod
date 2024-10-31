@@ -5,128 +5,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dota 2 Mod: Heroes Replaced with Creeps - Heroes</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #hero-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .hero {
+            background-color: #1e1e1e;
+            border: 1px solid #444;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .hero img {
+            max-width: 100px;
+            border-radius: 5px;
+        }
+
+        .hero:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Dota 2 Mod: Heroes Replaced with Creeps</h1>
-        <p>Version 0.8.98.6 | 30/10/24</p>
-        <p>A Dota 2 custom game mode mod where "Heroes Are Replaced With Creeps".</p>
-    </header>
     
+    <nav>
+        <a href="#intro">Intro</a>
+        <a href="#features">Features</a>
+        <a href="#hero-list">Heroes</a>
+        <a href="#maps">Maps</a>
+        <a href="#versioning">Versioning</a>
+        <a href="#links">Links</a>
+    </nav>
+
     <main>
-        <section id="intro">
-            <h2>Dota 2 But Heroes Are Replaced With Creeps</h2>
-            <p>In this mod, players control not the legendary heroes but powerful Neutral Creeps, Lane Creeps, Summons, or even terrifying Boss Monsters. Imagine charging the battle as Roshan, leading fights as a Centaur Conqueror, or dominating the game as a humble Radiant Ranged Creep.</p>
-            <p>Experience a fresh new game with exciting abilities, dynamic matchups, and iconic Dota 2 items that shape gameplay. Discover new strategies and item builds as heroes are replaced with creeps, unlocking limitless tactical possibilities.</p>
-            <p><strong>No microtransactions (NO MTX)</strong> — just pure, unfiltered fun with new metas and unexpected hero combinations.</p>
-        </section>
+        
 
         <section id="features">
-            <h2>Gameplay Features</h2>
-            <ul>
-                <li>Hero units without mana as some neutral creeps don't have mana.</li>
-                <li>Utilize items with neutral creep abilities.</li>
-                <li>Use Neutral creep spells with hero stats.</li>
-                <li>Play as Roshan, Yearbeast, or Tormentor with their unique abilities!</li>
-                <li>All Neutral items enabled!</li>
-            </ul>
+        
+        
             <p><em>Note: This mod is in development, not balanced, and is currently under heavy balancing.</em></p>
-        </section>
-
-        <section id="links">
-            <h2>External Links</h2>
-            <p>Website: <a href="https://come219.github.io/Dota2-Creep_Heroes_Mod/" target="_blank">Dota 2 Creep Heroes Mod</a></p>
-            <p>Contact:</p>
-            <ul>
-                <li>Steam: <a href="https://steamcommunity.com/id/come219" target="_blank">/id/come219</a></li>
-                <li>Twitch & Twitter: MrSoloQueue</li>
-                <li>Email: come219pkim@gmail.com</li>
-            </ul>
-        </section>
-
-        <section id="hero-stats">
-            <h2>Hero Stats</h2>
-            <p>View the <a href="https://docs.google.com/spreadsheets/d/19--Wm9LqAHekZDzgnyIDdgPJGcJcAu_neKIVAHinzxc/edit" target="_blank">Hero Stats Spreadsheet</a></p>
+			
+			    <h2>Hero List</h2>
         </section>
 
         <section id="hero-list">
-            <h2>Hero List</h2>
+            <h2>Strength</h2>
+            <div class="hero">
+                <a href="#alchemist">
+                    <img src="https://via.placeholder.com/100" alt="Alchemist">
+                    <p>Alchemist - Frost Kobold Small</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#axe">
+                    <img src="https://via.placeholder.com/100" alt="Axe">
+                    <p>Axe - Greevil'd Roshan</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#bristleback">
+                    <img src="https://via.placeholder.com/100" alt="Bristleback">
+                    <p>Bristleback - Radiant Hulk</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#centaur">
+                    <img src="https://via.placeholder.com/100" alt="Centaur">
+                    <p>Centaur - Centaur Khan</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#chaos-knight">
+                    <img src="https://via.placeholder.com/100" alt="Chaos Knight">
+                    <p>Chaos Knight - W.W. Dire Melee Creep</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#dawnbreaker">
+                    <img src="https://via.placeholder.com/100" alt="Dawnbreaker">
+                    <p>Dawnbreaker - Giant Wolf</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#doom">
+                    <img src="https://via.placeholder.com/100" alt="Doom">
+                    <p>Doom - Dire Hulk</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#dragon-knight">
+                    <img src="https://via.placeholder.com/100" alt="Dragon Knight">
+                    <p>Dragon Knight - Black Dragon</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#earth-spirit">
+                    <img src="https://via.placeholder.com/100" alt="Earth Spirit">
+                    <p>Earth Spirit - Earth Brewling</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#earth-shaker">
+                    <img src="https://via.placeholder.com/100" alt="Earth Shaker">
+                    <p>Earth Shaker - Furbolg Champion Potato</p>
+                </a>
+            </div>
+            <!-- Add more heroes following the same structure -->
+            <!-- Strength Heroes -->
+            <div class="hero">
+                <a href="#huskar">
+                    <img src="https://via.placeholder.com/100" alt="Huskar">
+                    <p>Huskar - Forest Hill Troll Priest</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#kunkka">
+                    <img src="https://via.placeholder.com/100" alt="Kunkka">
+                    <p>Kunkka - Ghostship</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#legion-commander">
+                    <img src="https://via.placeholder.com/100" alt="Legion Commander">
+                    <p>Legion Commander - Dire Melee Mega Creep</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#lifestealer">
+                    <img src="https://via.placeholder.com/100" alt="Lifestealer">
+                    <p>Lifestealer - Dire Melee Creep</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#mars">
+                    <img src="https://via.placeholder.com/100" alt="Mars">
+                    <p>Mars - Mars Soldier</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#night-stalker">
+                    <img src="https://via.placeholder.com/100" alt="Night Stalker">
+                    <p>Night Stalker - Crocodile Dire Melee Creep</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#ogre-magi">
+                    <img src="https://via.placeholder.com/100" alt="Ogre Magi">
+                    <p>Ogre Magi - Ogre Mauler</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#omniknight">
+                    <img src="https://via.placeholder.com/100" alt="Omniknight">
+                    <p>Omniknight - W.W. Radiant Siege Catapult Creep</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#primal-beast">
+                    <img src="https://via.placeholder.com/100" alt="Primal Beast">
+                    <p>Primal Beast - Roshan</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#pudge">
+                    <img src="https://via.placeholder.com/100" alt="Pudge">
+                    <p>Pudge - Dire Mega Creep</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#sand-king">
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Sand King - Sand Wraith</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#slardar">
+                    <img src="https://via.placeholder.com/100" alt="Slardar">
+                    <p>Slardar - Slithereen Guard</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#tiny">
+                    <img src="https://via.placeholder.com/100" alt="Tiny">
+                    <p>Tiny - Forest Tree</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#troll-warlord">
+                    <img src="https://via.placeholder.com/100" alt="Troll Warlord">
+                    <p>Troll Warlord - Bounty Hunter</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#wraith-king">
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Wraith King - Wraith</p>
+                </a>
+            </div>
             
-            <h3>Strength Heroes</h3>
-            <ul>
-                <li>Alchemist - Frost Kobold small</li>
-                <li>Axe - Greevil'd Roshan</li>
-                <li>Bristleback - Radiant Guardian</li>
-                <!-- Add other Strength heroes here -->
-            </ul>
-
-            <h3>Agility Heroes</h3>
-            <ul>
-                <li>Anti-Mage - Necronomicon Warrior</li>
-                <li>Arc Warden - Spark Wraith</li>
-                <li>Bloodseeker - Kobold Foreman Taskmaster</li>
-                <!-- Add other Agility heroes here -->
-            </ul>
-
-            <h3>Intelligence Heroes</h3>
-            <ul>
-                <li>A.A. - Melee A.A.</li>
-                <li>Crystal Maiden - Saytr Soulstealer</li>
-                <li>Death Prophet - DP Ghost Spirit</li>
-                <!-- Add other Intelligence heroes here -->
-            </ul>
-
-            <h3>Universal Heroes</h3>
-            <ul>
-                <li>Abaddon - Necronomicon Archer</li>
-                <li>Bane - Undying Zombie Arcana</li>
-                <li>Batrider - Forest Hill Troll Berserker</li>
-                <!-- Add other Universal heroes here -->
-            </ul>
         </section>
+        
+        <section id="Intelligence">
+            <h2>Intelligence</h2>
+			
+			<div class="hero">
+                <a href="#zeus">
+                    <img src="https://via.placeholder.com/100" alt="Zeus">
+                    <p>Zeus - Thunder God</p>
+                </a>
+            </div>
+            
+			</section>
 
-        <section id="maps">
-            <h2>Map List</h2>
-            <ul>
-                <li>map_build3: Current Patch Map (Neutral Creeps + Rune Spawning Bug)</li>
-                <li>map_728: Dota 2 7.28 Map (Roshan location + Twin Gates Bug)</li>
-                <li>map_pvp_dota_1: Dota 1 Map (dire-side Roshan) - Working?</li>
-            </ul>
+        <section id="Universal">
+            <h2>Universal</h2>
+			 <div class="hero">
+                <a href="#wraith-king">
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Wraith King - Wraith</p>
+                </a>
+            </div>
+            
+			</section>
 
-            <h3>Development Maps</h3>
+        <section id="links">
+            <h2>Links</h2>
             <ul>
-                <li>template map: View Hero abilities map.</li>
-                <li>simple map: mid wars map but no cliffs</li>
-                <li>the fourth lane: underground style map connected by four Roshan pits</li>
-                <li>the fifth lane: overground map with limited movement areas</li>
-                <li>Playground: dev testing map</li>
-            </ul>
-        </section>
-
-        <section id="versioning">
-            <h2>Versioning</h2>
-            <p>Current Version: v 0.8.98.6</p>
-            <ul>
-                <li>v 0.8.98.5 - new upload</li>
-                <li>v 0.8.98.4 - latest upload</li>
-                <li>v 0.8.98.3 - Centaur Khan old ability icon</li>
-                <li>v 0.8.00.0 - 'Workshop Publish'</li>
-                <!-- Add more version notes here -->
-            </ul>
-            <p><strong>Upcoming:</strong></p>
-            <ul>
-                <li>v 0.90 - 'Balancing & QOL'</li>
-                <li>v 0.95 - 'Visuals Update?'</li>
-                <li>v 1.00 - 'No Errors & Real Games Played'</li>
-                <li>v 1.10 - 'Facets & Innates Fixed'</li>
-                <li>v 1.20 - 'Leaderboards & MMR'</li>
+                <li><a href="https://www.dota2.com" target="_blank">Official Dota 2 Website</a></li>
+                <li><a href="https://www.moddb.com/mods/dota-2-mod-heroes-replaced-with-creeps" target="_blank">Dota 2 Mod on ModDB</a></li>
+                <li><a href="https://steamcommunity.com/app/570" target="_blank">Dota 2 Steam Community</a></li>
             </ul>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 219 Studios</p>
-        <p><a href="contact.html">Contact Us</a></p>
-    </footer>
 </body>
 </html>
