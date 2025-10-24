@@ -1,0 +1,117 @@
+// ...existing code...
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dota2 Creep & Heroes — Demo</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        background-color: #111;
+        color: #eee;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px;
+        background-color: #222;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 10px;
+    }
+
+    nav a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    nav a:hover {
+        background-color: #444;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    #hero-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .hero {
+        background-color: #1e1e1e;
+        border: 1px solid #444;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+        flex: 1 1 200px;
+        max-width: 220px;
+        box-sizing: border-box;
+    }
+
+    .hero img {
+        max-width: 100px;
+        border-radius: 5px;
+    }
+
+    .hero:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 520px) {
+        #hero-list {
+            justify-content: center;
+        }
+        .hero {
+            flex-basis: 100%;
+            max-width: 360px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dota2 Creep & Heroes</h1>
+        <p>Prototype UI — place your assets in /assets and update the src attributes</p>
+    </header>
+
+    <nav aria-label="Main">
+        <a href="#">Home</a>
+        <a href="#">Heroes</a>
+        <a href="#">Creeps</a>
+        <a href="#">Settings</a>
+    </nav>
+
+    <main>
+        <section id="hero-list" aria-live="polite">
+            <article class="hero" role="article">
+                <img src="https://via.placeholder.com/100x100?text=Hero+1" alt="Hero 1">
+                <h3>Hero One</h3>
+                <p>Strength • Carry</p>
+            </article>
+
+            <article class="hero" role="article">
+                <img src="https://via.placeholder.com/100x100?text=Hero+2" alt="Hero 2">
+                <h3>Hero Two</h3>
+                <p>Agility • Support</p>
+            </article>
+
+            <article class="hero" role="article">
+                <img src="https://via.placeholder.com/100x100?text=Hero+3" alt="Hero 3">
+                <h3>Hero Three</h3>
+                <p>Intelligence • Nuker</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
+// ...existing code...

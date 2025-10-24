@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hero Draft Simulator</title>
+  <style>
+    :root{--bg:#0f0f12;--panel:#161618;--muted:#9aa0a6;--accent:#38bdf8}
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#e6eef6}
+    header{padding:16px;text-align:center;background:#0b0b0d;border-bottom:1px solid #1e1e22}
+    main{display:flex;gap:16px;padding:16px;align-items:flex-start}
+    .panel{background:var(--panel);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+    #pool{flex:1;display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;max-height:70vh;overflow:auto}
+    .hero{padding:8px;text-align:center;border-radius:6px;cursor:pointer;border:1px solid transparent;user-select:none}
+    .hero img{width:64px;height:64px;border-radius:6px;display:block;margin:0 auto 6px}
+    .hero h4{margin:0;font-size:14px}
+    .hero p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+    .hero:hover{outline:2px solid rgba(56,189,248,0.12)}
+    .hero.picked{opacity:.5;border:1px dashed #4a4a4a}
+    .hero.banned{opacity:.35;filter:grayscale(80%);text-decoration:line-through}
+    aside{width:320px;display:flex;flex-direction:column;gap:10px}
+    .teams{display:flex;gap:8px}
+    .team{flex:1;padding:8px;border-radius:6px}
+    .team h3{margin:0 0 8px 0;font-size:14px}
+    .list{display:flex;flex-wrap:wrap;gap:6px}
+    .slot{padding:6px 8px;border-radius:999px;background:#0c0c0d;font-size:13px;color:var(--muted)}
+    .controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .controls button{background:#121215;color:#e6eef6;border:1px solid rgba(255,255,255,0.04);padding:8px;border-radius:6px;cursor:pointer}
+    .controls select{padding:8px;border-radius:6px;background:#0e0e10;border:1px solid rgba(255,255,255,0.04);color:#e6eef6}
+    .status{font-size:13px;color:var(--muted);margin-top:6px}
+    footer{padding:12px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){main{flex-direction:column}aside{width:auto}}
+  </style>
+</head>
+<body>
+  <header class="panel">
+    <h1 style="margin:0;font-size:18px">Hero Draft Simulator</h1>
+    <div style="margin-top:6px;color:var(--muted);font-size:13px">Click a hero to Pick or Ban. Turn alternates between Radiant and Dire.</div>
+  </header>
+
+  <main>
+    <section class="panel" style="flex:2">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div>
+          <label style="color:var(--muted);font-size:13px">Action:</label>
+          <select id="action">
+            <option value="pick">Pick</option>
+            <option value="ban">Ban</option>
+          </select>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button id="randomPick">Random pick</button>
+          <button id="undo">Undo</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+
+      <div id="pool" aria-live="polite"></div>
+    </section>
+
+    <aside>
+      <div class="panel teams">
+        <div class="team" style="background:linear-gradient(180deg,#081226 0%,#07111a 100%);">
+          <h3>Radiant</h3>
+          <div class="list" id="radiant-picks"></div>
+        </div>
+        <div class="team" style="background:linear-gradient(180deg,#220811 0%,#14060a 100%);">
+          <h3>Dire</h3>
+          <div class="list" id="dire-picks"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="controls">
+          <div style="min-width:120px">
+            <strong>Turn:</strong>
+            <div id="turn" class="status">Radiant</div>
+          </div>
+          <div>
+            <strong>Round:</strong>
+            <div id="round" class="status">1</div>
+          </div>
+        </div>
+        <div class="status" id="log" style="margin-top:10px">No actions yet.</div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>Assets: place hero images in /assets and update hero definitions if needed.</footer>
+
+  <script>
+    // Simple hero pool. Replace images with local assets in /assets/.
+    const HEROES = [
+      { id: 'axe', name: 'Axe', attr: 'Strength', img: 'https://via.placeholder.com/64?text=Axe' },
+      { id: 'sniper', name: 'Sniper', attr: 'Agility', img: 'https://via.placeholder.com/64?text=Sniper' },
+      { id: 'lina', name: 'Lina', attr: 'Intelligence', img: 'https://via.placeholder.com/64?text=Lina' },
+      { id: 'slark', name: 'Slark', attr: 'Agility', img: 'https://via.placeholder.com/64?text=Slark' },
+      { id: 'tinker', name: 'Tinker', attr: 'Intelligence', img: 'https://via.placeholder.com/64?text=Tinker' },
+      { id: 'bristle', name: 'Bristleback', attr: 'Strength', img: 'https://via.placeholder.com/64?text=Bristle' },
+      { id: 'crystal', name: 'Crystal Maiden', attr: 'Intelligence', img: 'https://via.placeholder.com/64?text=CM' },
+      { id: 'juggernaut', name: 'Juggernaut', attr: 'Agility', img: 'https://via.placeholder.com/64?text=Jugger' },
+      { id: 'earth', name: 'Earthshaker', attr: 'Strength', img: 'https://via.placeholder.com/64?text=ES' },
+      { id: 'drow', name: 'Drow Ranger', attr: 'Agility', img: 'https://via.placeholder.com/64?text=Drow' }
+    ];
+
+    // State
+    const state = {
+      pool: {}, // id -> {status: 'available'|'picked'|'banned', pickedBy: 'Radiant'|'Dire' }
+      turn: 'Radiant',
+      round: 1,
+      history: [] // {action, heroId, team, round}
+    };
+
+    const el = {
+      pool: document.getElementById('pool'),
+      action: document.getElementById('action'),
+      turn: document.getElementById('turn'),
+      round: document.getElementById('round'),
+      radiant: document.getElementById('radiant-picks'),
+      dire: document.getElementById('dire-picks'),
+      log: document.getElementById('log'),
+      undo: document.getElementById('undo'),
+      reset: document.getElementById('reset'),
+      randomPick: document.getElementById('randomPick')
+    };
+
+    function initState(){
+      HEROES.forEach(h => state.pool[h.id] = { ...h, status: 'available', pickedBy: null });
+      state.turn = 'Radiant';
+      state.round = 1;
+      state.history = [];
+      renderPool();
+      renderTeams();
+      renderMeta();
+      setLog('Draft started.');
+    }
+
+    function renderPool(){
+      el.pool.innerHTML = '';
+      HEROES.forEach(h => {
+        const item = state.pool[h.id];
+        const div = document.createElement('div');
+        div.className = 'hero ' + (item.status === 'picked' ? 'picked' : item.status === 'banned' ? 'banned' : '');
+        div.setAttribute('data-id', h.id);
+        div.innerHTML = `<img src="${h.img}" alt="${h.name}"><h4>${h.name}</h4><p>${h.attr}</p>`;
+        if(item.status === 'available'){
+          div.tabIndex = 0;
+          div.addEventListener('click', () => selectHero(h.id));
+          div.addEventListener('keydown', (ev) => { if(ev.key === 'Enter') selectHero(h.id) });
+        } else {
+          div.setAttribute('aria-disabled','true');
+        }
+        el.pool.appendChild(div);
+      });
+    }
+
+    function renderTeams(){
+      el.radiant.innerHTML = '';
+      el.dire.innerHTML = '';
+      Object.values(state.pool).forEach(h => {
+        if(h.status === 'picked'){
+          const node = document.createElement('div');
+          node.className = 'slot';
+          node.textContent = h.name;
+          if(h.pickedBy === 'Radiant') el.radiant.appendChild(node);
+          else el.dire.appendChild(node);
+        }
+      });
+    }
+
+    function renderMeta(){
+      el.turn.textContent = state.turn;
+      el.round.textContent = state.round;
+    }
+
+    function setLog(text){
+      el.log.textContent = text;
+    }
+
+    function selectHero(id){
+      const action = el.action.value; // pick or ban
+      const item = state.pool[id];
+      if(!item || item.status !== 'available') return;
+      if(action === 'ban'){
+        item.status = 'banned';
+        state.history.push({ action:'ban', heroId:id, team:state.turn, round:state.round });
+        setLog(`${state.turn} banned ${item.name}`);
+      } else {
+        item.status = 'picked';
+        item.pickedBy = state.turn;
+        state.history.push({ action:'pick', heroId:id, team:state.turn, round:state.round });
+        setLog(`${state.turn} picked ${item.name}`);
+      }
+      advanceTurn();
+      renderPool();
+      renderTeams();
+      renderMeta();
+    }
+
+    function advanceTurn(){
+      state.turn = (state.turn === 'Radiant') ? 'Dire' : 'Radiant';
+      state.round += 1;
+    }
+
+    function undo(){
+      const last = state.history.pop();
+      if(!last){ setLog('Nothing to undo.'); return; }
+      const item = state.pool[last.heroId];
+      if(last.action === 'pick'){
+        item.status = 'available';
+        item.pickedBy = null;
+        setLog(`Undid pick of ${item.name} by ${last.team}`);
+      } else {
+        item.status = 'available';
+        setLog(`Undid ban of ${item.name} by ${last.team}`);
+      }
+      // revert turn and round
+      state.turn = last.team;
+      state.round = Math.max(1, last.round);
+      renderPool();
+      renderTeams();
+      renderMeta();
+    }
+
+    function reset(){
+      if(!confirm('Reset the draft?')) return;
+      initState();
+    }
+
+    function randomPick(){
+      const available = Object.values(state.pool).filter(h => h.status === 'available');
+      if(available.length === 0){ setLog('No heroes left to pick.'); return; }
+      const choice = available[Math.floor(Math.random()*available.length)];
+      // perform pick action even if current action is 'ban' -- use the selected action from UI
+      selectHero(choice.id);
+    }
+
+    el.undo.addEventListener('click', undo);
+    el.reset.addEventListener('click', reset);
+    el.randomPick.addEventListener('click', randomPick);
+
+    // keyboard: R to random pick, U to undo, X to reset
+    window.addEventListener('keydown', (e) => {
+      if(e.key.toLowerCase() === 'r') randomPick();
+      if(e.key.toLowerCase() === 'u') undo();
+      if(e.key.toLowerCase() === 'x') reset();
+    });
+
+    initState();
+  </script>
+</body>
+</html>
