@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation to JSON</title>
+</head>
+<body>
+
+<a href="index.html">Back to Home</a>   
+
+    <h1>HTML Documentation to JSON</h1>
+    
+    <a href="docs.json">json</a>   
+
+
+
+
+    <h1>Convert HTML Documentation to JSON</h1>
+    <button id="convertButton">Convert to JSON</button>
+    <pre id="jsonOutput"></pre>
+
+    <script>
+        document.getElementById('convertButton').addEventListener('click', function() {
+            const jsonData = {
+                title: document.title,
+                content: document.body.innerText
+            };
+            document.getElementById('jsonOutput').textContent = JSON.stringify(jsonData, null, 2);
+        });
+    </script>
+</body>
+</html>
