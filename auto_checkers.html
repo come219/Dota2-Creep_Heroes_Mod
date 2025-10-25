@@ -1,78 +1,107 @@
-// auto checkers Game
-
-// creeps instead of heroes with creeps Alliances
-
-  
-
-Auto Checkers Custom Game idea
-Basically Auto Chess but instead of picking from a pool of heroes, you can pick from the pool of creeps.
-
-New alliances/synergies
-
-New metas
-
-New strategies
-
-
-For example:
-
-
-Troll synergy with the troll camps
-
-Harpy synergy with the Harpy camp and Harpy ancient creep
-
-Ancient synergy with all Ancients
-
-Tormentor synergy
-
-Roshan synergy
-
-Yearbeast synergy
-
-Vhoul synergy
-
-Ghost synergy
-
-Easy camp synergy
-
-Hard camp synergy
-
-Centaur synergy
-
-Mud golem synergy
-
-Kobold synergy
-
-Skeleton warrior synergy
-
-Lane creep synergy
-
-Summoned creep synergy
-
-Necronomicon synergy
-
-
-Eidolon synergy- perhaps with different eidolon skins
-
-Beastmaster boar synergy
-
-Beastmaster hawk synergy
-
-Invoker forged spirit synergy
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2 Mod: Heroes Replaced with Creeps - Auto Checkers</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            size: 5px;
+        }
+
+        header {
+            text-align: center;
+            padding: 5px;
+            background-color: #222;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 5px;
+        }
+
+        nav a {
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+        main {
+            padding: 5px;
+        }
+
+        #hero-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .hero {
+            background-color: #1e1e1e;
+            border: 1px solid #444;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .hero img {
+            max-width: 100px;
+            border-radius: 5px;
+        }
+
+        .hero:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#intro">Intro</a>
+        <a href="#features">Features</a>
+        <a href="#hero-list">Heroes</a>
+        <a href="#maps">Maps</a>
+        <a href="#versioning">Versioning</a>
+        <a href="#links">Links</a>
+    </nav>
+
+    <main>
+        
+
+        <section id="features">
+        
+        
+            <p><em>Note: This mod is in development, not balanced, and is currently under heavy balancing.</em></p>
+			
+			    <h2>Alliance List</h2>
+                <h3>Alliances are categorized by their tierlist</h3>
 
 
-
-
-_____________________________________
-
-
+                <p>                    
 Courier Synergy: Each Courier decreases the damage taken by 10%/20%/40% for 1/2/3 Couriers.
 - Radiant Courier (1: Courier, Flying, ),
 - Dire Courier (1: Courier, Flying, ),
 - Bling Courier (1: Courier, Flying, ),
+
 
 Crystal-Dimension Synergy: A Crystal-Dimension Creep grants all allies a random rune buff at the start of each round for 2 Crystal-Dimension Creeps.
 - Crystal Melee Creep (1: Crystal-Dimension, Fighter, ),
@@ -289,4 +318,1615 @@ Ancient Synergy: Ancients provide Flat HP. +200/+300/+400 for 2/4/6 Ancients.
 - Drakken Guard
 - Ancient Hydra
 
+                </p>
 
+                
+                
+                
+                <h3>Auto Checkers</h3>
+
+                <h3>Click on the hero image or name to view more details about each hero, alliance, ability.</h3>
+                <h3>search bar</h3>
+
+        </section>
+
+
+         <section id="Agility2">
+            <h2>Agility</h2>
+			 <div class="hero">
+                <a href="#wraith-king">
+                    <p>Wraith King</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Wraith Skeleton</p>
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#kunkka">
+                    <p>Kunkka</p>
+                    <img src="https://via.placeholder.com/100" alt="Kunkka">
+                    <p>The Ghostship</p>
+                    <p>Ranged, Splash, Tidebringer</p>
+                </a>
+            </div>
+
+            <div class="hero">
+                <a href="#mars">
+                    <p>Mars</p>
+                    <img src="https://via.placeholder.com/100" alt="Mars">
+                    <p>Mars Soldier</p>
+                    <p>Agility, Mars, No Mana</p>
+                </a>
+            </div>
+            
+			</section>
+
+
+
+            <h2>UNIVERSAL</h2>
+            
+            <div class="hero-row" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                <div class="hero">
+                    <a href="#alchemist">
+                        <p>Alchemist</p>
+                        <img src="images/Kobold_icon_dota2_gameasset.png" alt="Alchemist" width="128" height="72">
+                        <p>Frost Kobold Small</p>
+                        <p>Dig, GPM aura, gives aghs</p>
+                    </a>
+                </div>
+
+
+                <div class="hero">
+                <a href="#centaur">
+                    <p>Centaur</p>
+                    <img src="https://static.wikia.nocookie.net/dota2_gamepedia/images/8/82/Centaur_Conqueror_icon.png/revision/latest?cb=20170416183322" alt="Centaur">
+                    <p><a href="hero.html#Centaur">Centaur Khan Conqueror</a></p>
+                    <p> <a href="https://liquipedia.net/dota2/Centaur_Conqueror">Stacking Aura, Stomp, reincarnation</p>
+                    
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#dawnbreaker">
+                     <p>Dawnbreaker</p>
+                    <img src="images/Giant_Wolf_icon_dota2_gameasset.png" alt="Dawnbreaker">
+                   
+                     <p><a href="hero.html#Wolf">Giant Wolf</a></p>
+                    <p> <a href="https://liquipedia.net/dota2/Giant_Wolf">Intimidate, Roar, Crit</p>
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#dragon-knight">
+                    <p>Dragon Knight</p>
+                    <img src="images/Black_dragon_icon_dota2_gameasset.png" alt="Dragon Knight">
+                     <p><a href="hero.html#Wolf">Black Dragon</a></p>
+                    <p> <a href="https://liquipedia.net/dota2/Black_Dragon">Fire pools, Dragon passive, Dragon Form*</p>
+                </a>
+            </div>
+
+            <div class="hero">
+                <a href="#earth-shaker">
+                    <p>Earth Shaker (Potato)</p>
+                    <img src="images/Hellbear_champion_icon_dota2_gameasset.png" alt="Earth Shaker">
+                     <p><a href="hero.html#Potato">Furbolg Champion</a></p>
+                    <p> <a href="https://liquipedia.net/dota2/Furbolg_Champion">Attack speed aura, vengence aura?, Bear</p>
+                    
+                </a>
+            </div>
+
+
+            </div>
+
+
+            
+            <div class="hero-row" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+
+                <div class="hero">
+                <a href="#huskar">
+                    <p>Huskar</p>
+                    <img src="images/Hellbear_champion_icon_dota2_gameasset.png" alt="Huskar">
+                    <p>Forest Hill Troll Priest</p>
+                    <p> <a href="https://liquipedia.net/dota2/Furbolg_Champion">Heals, Dispels, Heal</p>
+                </a>
+            </div>
+
+            <div class="hero">
+                <a href="#ogre-magi">
+                    <p>Ogre Magi</p>
+                    <img src="https://via.placeholder.com/100" alt="Ogre Magi">
+                    <p>Ogre Mauler</p>
+                    <p> <a href="https://liquipedia.net/dota2/Furbolg_Champion">2 Ogres, 1 Stun, multi-cast</p>
+                </a>
+            </div>
+
+
+
+            <div class="hero">
+                <a href="#primal-beast">
+                    <p>Primal Beast</p>
+                    <img src="https://via.placeholder.com/100" alt="Primal Beast">
+                    <p>Roshan</p>
+                    <p>Aegis, Universal, Reincarnation</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Spectre</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Tormentor</p>
+                    <p>Torment, Shield, Dispersion</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Arc Warden</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Alchemist Ogre</p>
+                    <p>Alchemist, Ogre, Seal</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Slardar</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Zombie Ogre</p>
+                    <p>Zombie, Ogre, Seal</p>
+                </a>
+            </div>
+
+
+
+                
+            </div>
+
+
+         <section id="Universal">
+            <h2>Universal</h2>
+
+            
+            
+
+            
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Monkey King</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Relict</p>
+                    <p>Nightstalking, Monkey</p>
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Bane</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Undying Zombie Bling</p>
+                    <p>Zombie, Bling</p>
+                </a>
+            </div>
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Dazzle</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Undying Zombie Torso</p>
+                    <p>Zombie, Torso</p>
+                </a>
+            </div>
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Venomancer</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Veno Ward</p>
+                    <p>Poison Nova, Ward</p>
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Broodmother</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Giant Crab</p>
+                    <p>Hook, Crab, Seaborn</p>
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Juggernaunt ***</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Skeleton King Skeleton</p>
+                    <p>Skeleton, Crit</p>
+                </a>
+            </div>
+
+            
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Juggernaunt ***</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Skeleton King Skeleton</p>
+                    <p>Skeleton, Crit</p>
+                </a>
+            </div>
+
+            
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Invoker</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Forged Spirit</p>
+                    <p>Forge Spirits, alacrity, Manaless, Sunstrike***</p>
+                </a>
+            </div>
+
+            
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Weaver</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Weaver Swarm/p>
+                    <p>Weaver Swarm, Terrain walking</p>
+                </a>
+            </div>
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Obsidian Destroyer</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Familiar</p>
+                    <p>Visage, Stone form, silent grave, Manaless</p>
+                </a>
+            </div>
+
+
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Enigma</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ediolon</p>
+                    <p>Ediolons, Blackhole, Manaless</p>
+                </a>
+            </div>
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Broother</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Spiderling</p>
+                    <p>Spiderites, Web, Manaless</p>
+                </a>
+            </div>
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Phantom Lancer</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Furion Treant</p>
+                    <p>Tree, Treants, Manaless</p>
+                </a>
+            </div>
+            
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Beastmaster</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Boar</p>
+                    <p>Beastmaster, Boars, Manaless</p>
+                </a>
+            </div>
+            
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Terrorblade</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Hawk</p>
+                    <p>Beastmaster, Hawks, Invisibile</p>
+                </a>
+            </div>
+            
+
+
+
+
+
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Lina</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Warlock Golem</p>
+                    <p>Imps, Golems, Facets</p>
+                </a>
+            </div>
+            
+
+
+
+            
+
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Lone Driud</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Spirit Bear</p>
+                    <p>Bear, Universal*** or Agility</p>
+                </a>
+            </div>
+            
+
+     
+
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Earth Spirit</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Earth Brewling</p>
+                    <p>Spirit, Earth, Panda</p>
+                </a>
+            </div>
+            
+
+            
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Ember Spirit</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Fire Brewling</p>
+                    <p>Spirit, Fire, Panda</p>
+                </a>
+            </div>
+            
+
+
+            
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Storm Spirit</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Storm Brewling</p>
+                    <p>Spirit, Storm, Panda</p>
+                </a>
+            </div>
+            
+
+            
+
+            
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Elder Titan</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ancestral Spirit</p>
+                    <p>Spirit, Ancestral, Centaur</p>
+                </a>
+            </div>
+            
+
+            
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Kunkka</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ghostship</p>
+                    <p>Spirit, Ghost, Pirate</p>
+                </a>
+            </div>
+            
+
+
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Anti-Mage</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Necronomicon Warrior</p>
+                    <p>Necronomicon, Warrior, Manaless</p>
+                </a>
+            </div>
+            
+            
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Abaddon</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Necronomicon Archer</p>
+                    <p>Necronomicon, Archer, Manaless</p>
+                </a>
+            </div>
+
+            
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Clinkz</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Clinkz Archer</p>
+                    <p>Skeleton, Archer, Manaless</p>
+                </a>
+            </div>
+            
+
+            
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Dark Willow</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Doom Guard</p>
+                    <p>Demon, Devour, Manaless</p>
+                </a>
+            </div>
+            
+
+
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Phoenix</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ancient Gargoyle</p>
+                    <p>Gargoyle, Harpy, Manaless</p>
+                </a>
+            </div>
+            
+
+            
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Winter Wyvern</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ancient Jungle Stalker</p>
+                    <p>NightStalker, Harpy, Manaless</p>
+                </a>
+            </div>
+
+                  
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Disruptor - Drakken A</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ancient Dragonspawn Sorcerer</p>
+                    <p>Drakken, Evasion, Ancient</p>
+                </a>
+            </div>
+            
+
+            
+                  
+  <div class="hero">
+                <a href="#sand-king">
+                    <p>Grimstroke - Drakken B</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ancient Dragonspawn Overseer</p>
+                    <p>Drakken, Evasion, Ancient</p>
+                </a>
+            </div>
+            
+
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Sand King - eimermole</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Krill Big</p>
+                    <p>Burrow Strike, Dismember, Creep Siege, Sand Wraith</p>
+                </a>
+            </div>
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>IO - eimermole lamp</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Krill Small</p>
+                    <p>Burrow Strike, Dismember, Creep Siege, Stun Overcharge</p>
+                </a>
+            </div>
+
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Gyrocopter - Spawn b</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Prowler Acoltye ****</p>
+                    <p>Ancient, Satyr, Basher, Lifesteal Aura</p>
+                </a>
+            </div>
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Faceless Void - Spawn A</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Prowler Shaman ****</p>
+                    <p>Ancient, Satyr, Stomp, chrono, timezone</p>
+                </a>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Snapfire</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Thunderlizard - small</p>
+                    <p>Ancient, Wardrums Aura, Zuus</p>
+                </a>
+            </div>
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Kez</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Thunderlizard - big</p>
+                    <p>Ancient, Slam, Zuus</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Tidehunter</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Demo Dummy</p>
+                    <p>Tidehunter, blink, taunt</p>
+                </a>
+            </div>
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Tinker</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Frostbitten Swollen</p>
+                    <p>Time Aura, Chakra Magic, Time Walk</p>
+                </a>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Witch Doctor</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Frostbitten Giant</p>
+                    <p>Death Ward, Penitence, Tower Bomb</p>
+                </a>
+            </div>
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Keeper of the light</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Frostbitten Shaman</p>
+                    <p>Shaman Bomb, Chakra Magic, Spirit Form</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Warlock</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Frostbitten 01</p>
+                    <p>Shaman Bomb, Coconuts, Rearm</p>
+                </a>
+            </div>
+
+
+
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Jakiro</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Black Dragon</p>
+                    <p>Dragon, Fireball, Jakiro</p>
+                </a>
+            </div>
+
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Dragon Knight</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Black Drake</p>
+                    <p>Dragon, Magic Amp. Aura, Elder form***</p>
+                </a>
+            </div>
+
+
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Nevermore Shadowfiend</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ancient Rock Golem</p>
+                    <p>Ancient, Golem, Armor Reduction Aura</p>
+                </a>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Tiny</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ancient Granite Golem</p>
+                    <p>Ancient, Golem, Hurl</p>
+                </a>
+            </div>
+
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Leshrac</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Centaur Courser</p>
+                    <p>Centaur, Magic Resist. Aura, Work horse?</p>
+                </a>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Centaur</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Centaur Khan</p>
+                    <p>Centaur, Stomp, Reincarnation</p>
+                </a>
+            </div>
+
+
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Ursa (Tomato)</p>
+                    <img src="images/Hellbear_Smasher_icon_dota2_gameasset.png" alt="Sand King">
+                    <p>Hellbear Warrior</p>
+                    <p>Hellbear, Clap, Stomp, death ability - Venge Aura ***</p>
+                </a>
+            </div>
+
+
+
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Earthshaker (Potato)</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Hellbear Champion</p>
+                    <p>Hellbear, Attack Speed Aura, death ability - Venge Aura(X)</p>
+                </a>
+            </div>
+
+
+
+            
+
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Shadow Shaman</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Dark Troll Summoner</p>
+                    <p>Troll, Skeletons, Net</p>
+                </a>
+            </div>
+
+
+            
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Medusa</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Frost Dark Troll Summoner</p>
+                    <p>Earthbind, Nets, Stun Skeleton</p>
+                </a>
+            </div>
+
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Troll Warlord</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Dark Hill Troll</p>
+                    <p>Ensnare, Troll, Fevor</p>
+                </a>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Naga Siren</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Skeleton Warrior</p>
+                    <p>Skeleton Rally, Illusions, Skeletons</p>
+                </a>
+            </div>
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Vengeful Spirit</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Wildwing Vulture B</p>
+                    <p>Tempest Tornado, Tempest, Gale Force</p>
+                </a>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Skywrath Mage</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Wildwing Vulture A</p>
+                    <p>Hurricane Mover, Toughness Aura, Gale Force</p>
+            </div>
+
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Rikimaru</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Satyr Trickster</p>
+                    <p>Satyr, Purge, Blink, Projector</p>
+            </div>
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Crystal Maiden</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Satyr Soulstealer</p>
+                    <p>Satyr, Mana, Burn, Tempest Double***</p>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Dark Seer</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Satyr Hellcaller</p>
+                    <p>Satyr, Shockwave, Bloodlust, Tempest Double***</p>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Lycan - Worg Large</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Alpha Wolf</p>
+                    <p>Alpha Wolf Aura, Wolf Crit, Howl, Venge Aura (x)<p>
+            </div>
+
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Dawnbreaker - Worg Small</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Giant Wolf</p>
+                    <p>Intimidate, Howl, Giant Wolf Crit,<p>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Hoodwink - Pine Cone</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Warpine Raider</p>
+                    <p>Acorn Shot, Pine Cone Shot, Treant, Sharpshooter***<p>
+            </div>
+
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Meepo</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Mud Golem Shard</p>
+                    <p>Hurl Boulder, Divided We Stand<p>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Sven</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Mud Golem</p>
+                    <p>Debuff Immunitity, Hurl Boulders, Storm Hammer<p>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Phantom Assassin</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>FrostVhoul Assassin</p>
+                    <p>Poison, DOT, Crit<p>
+            </div>
+
+
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Bat Rider</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Forest Troll Beserker</p>
+                    <p>Troll, Break, Fervor<p>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Huskar</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Troll High Priest</p>
+                    <p>Troll, Heal, Dispel<p>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Ogre Magi</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ogre Mauler</p>
+                    <p>Ogres, Stun, Multicast<p>
+            </div>
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Lich</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ogre Mage</p>
+                    <p>Ogres, Frost Armour, Multicast<p>
+            </div>
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Bloodseeker</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Kobold Foreman</p>
+                    <p>Kobold, Movement Speed Aura, Whip<p>
+            </div>
+
+            
+            
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Oracle</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Kobold Soldier</p>
+                    <p>Kobold, Disarm, Rearm<p>
+            </div>
+
+            
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Slark</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Kobold Tunneler</p>
+                    <p>Kobold, GPM Aura, Dig<p>
+            </div>
+
+            
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Alchemist</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Kobold Tunneler</p>
+                    <p>Kobold, GPM Aura, Dig<p>
+            </div>
+
+            
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Visage</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Harpy Scout</p>
+                    <p>Harpy, Vision, Speed<p>
+            </div>
+
+              
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Zuus</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Harpy Storm</p>
+                    <p>Harpy, Chain Ligtning, Amp. Damage<p>
+            </div>
+
+
+            
+              
+
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Viper</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>Ghost</p>
+                    <p>Ghosts, Frost Attack, Ethereal***<p>
+            </div>
+
+
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Silencer</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>fell spirit b</p>
+                    <p>Ghosts, Silence, projection silence<p>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Pugna</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>fell spirit green</p>
+                    <p>Ghosts, drain, channel<p>
+            </div>
+
+            
+            <div class="hero">
+                <a href="#sand-king">
+                    <p>Rattletrap Clockwerk</p>
+                    <img src="https://via.placeholder.com/100" alt="Sand King">
+                    <p>fell spirit red</p>
+                    <p>Ghosts, battery assault, projection<p>
+            </div>
+
+
+			 <div class="hero">
+                <a href="#wraith-king">
+                    <p>Wraith King</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Wraith Skeleton</p>
+                </a>
+            </div>
+
+
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Night Stalker</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Tadpole C</p>
+                     <p>Frogs, Boosted Frog Aura, Water Pool</p>
+                </a>
+            </div>
+
+
+
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Omni Knight</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Tadpole Ranged v2</p>
+                     <p>Frog, bubble small, meld poison</p>
+                </a>
+            </div>
+
+            
+
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Muerta</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Ancient Frog Mage</p>
+                     <p>Frog, bubble large, rip tide, kraken shell</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Shredder Timbersaw</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Froglet Mage</p>
+                     <p>Frog, bubble medium, mirror image, enfeeble***</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Razor</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Tadpole v2</p>
+                     <p>Frog, arm of the deep, snapfire cookie, root***</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Luna</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Froglet</p>
+                     <p>Frog, tendrils of the deep, leap, Slithereen crush***</p>
+                </a>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Enchantress</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Ancient Frog</p>
+                     <p>Ancient, Frog, congregation of the deep, pounce, leap***</p>
+                </a>
+            </div>
+
+			</section>
+
+        <section id="hero-list">
+
+            
+
+
+            <h2>Strength</h2>
+           
+            <div class="hero">
+                <a href="#axe">
+                    <img src="https://via.placeholder.com/100" alt="Axe">
+                    <p>Axe - Greevil'd Roshan</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#bristleback">
+                    <img src="https://via.placeholder.com/100" alt="Bristleback">
+                    <p>Bristleback - Radiant Hulk</p>
+                </a>
+            </div>
+            
+            <div class="hero">
+                <a href="#chaos-knight">
+                    <img src="https://via.placeholder.com/100" alt="Chaos Knight">
+                    <p>Chaos Knight - W.W. Dire Melee Creep</p>
+                </a>
+            </div>
+            
+            <div class="hero">
+                <a href="#doom">
+                    <img src="https://via.placeholder.com/100" alt="Doom">
+                    <p>Doom - Dire Hulk</p>
+                </a>
+            </div>
+            
+            <div class="hero">
+                <a href="#earth-spirit">
+                    <img src="https://via.placeholder.com/100" alt="Earth Spirit">
+                    <p>Earth Spirit - Earth Brewling</p>
+                </a>
+            </div>
+            
+            <!-- Add more heroes following the same structure -->
+            <!-- Strength Heroes -->
+            
+            
+            <div class="hero">
+                <a href="#legion-commander">
+                    <img src="https://via.placeholder.com/100" alt="Legion Commander">
+                    <p>Legion Commander - Dire Melee Mega Creep</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#lifestealer">
+                    <img src="https://via.placeholder.com/100" alt="Lifestealer">
+                    <p>Lifestealer - Dire Melee Creep</p>
+                </a>
+            </div>
+            
+            <div class="hero">
+                <a href="#night-stalker">
+                    <img src="https://via.placeholder.com/100" alt="Night Stalker">
+                    <p>Night Stalker - Crocodile Dire Melee Creep</p>
+                </a>
+            </div>
+            
+            <div class="hero">
+                <a href="#omniknight">
+                    <img src="https://via.placeholder.com/100" alt="Omniknight">
+                    <p>Omniknight - W.W. Radiant Siege Catapult Creep</p>
+                </a>
+            </div>
+            
+            <div class="hero">
+                <a href="#pudge">
+                    <img src="https://via.placeholder.com/100" alt="Pudge">
+                    <p>Pudge - Dire Mega Creep</p>
+                </a>
+            </div>
+            
+            <div class="hero">
+                <a href="#slardar">
+                    <img src="https://via.placeholder.com/100" alt="Slardar">
+                    <p>Slardar - Slithereen Guard</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#tiny">
+                    <img src="https://via.placeholder.com/100" alt="Tiny">
+                    <p>Tiny - Forest Tree</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#troll-warlord">
+                    <img src="https://via.placeholder.com/100" alt="Troll Warlord">
+                    <p>Troll Warlord - Bounty Hunter</p>
+                </a>
+            </div>
+            <div class="hero">
+                <a href="#wraith-king">
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Wraith King - Wraith</p>
+                </a>
+            </div>
+
+
+
+              <div class="hero">
+                <a href="#wraith-king">
+                     <p>Spirit Breaker</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Mega Melee Creep Bug</p>
+                     <p>Mega creep, Bug, Manaless</p>
+                </a>
+            </div>
+
+
+             <div class="hero">
+                <a href="#wraith-king">
+                     <p>Puck</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Radiant Mega Ranged Creep Bug</p>
+                     <p>Mega creep, Bug, Fairy</p>
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Lion</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Ranged Creep Bug</p>
+                     <p>Mega creep, Bug, Fighting</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Drow Ranger</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Ranged Creep Bird</p>
+                     <p>Mega creep, Bird, Fighting</p>
+                </a>
+            </div>
+
+
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Chaos Knight</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Melee Creep Bug</p>
+                     <p>Mega creep, Bug, Fighting</p>
+                </a>
+            </div>
+
+                  
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Bristleback</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Hulk Creep</p>
+                     <p>Mega creep, Hulk, Fighting</p>
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Bristleback</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Hulk Creep</p>
+                     <p>Mega creep, Hulk, Fighting</p>
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Legion Commander</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Melee Creep Crystal</p>
+                     <p>Mega creep, Crystal, Fighting</p>
+                </a>
+            </div>
+
+
+            
+         
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Abyssal Underlord</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Melee Creep Crocodilian</p>
+                     <p>Mega creep, Crocodile, Fighting</p>
+                </a>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Queen of Pain</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Ranged Creep Crocodilian</p>
+                     <p>Mega creep, Crocodile, Assassin</p>
+                </a>
+            </div>
+
+            
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Bounty Hunter</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Radiant Mega Melee Creep Bird</p>
+                     <p>Mega creep, Bird, Fighting</p>
+                </a>
+            </div>
+
+
+            
+            
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Marci</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Radiant Mega Flagbearer Creep Chameleon</p>
+                     <p>Mega creep, Chameleon, Fighting</p>
+                </a>
+            </div>
+
+
+
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Mirana</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Radiant Mega Ranged Creep Chameleon</p>
+                     <p>Mega creep, Chameleon, Assassin</p>
+                </a>
+            </div>
+
+
+
+            
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Treant Protector</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Radiant Mega Melee Creep Crystal</p>
+                     <p>Mega creep, Crystal, Protector</p>
+                </a>
+            </div>
+
+
+            
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Furion Natures Prophet</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Radiant Mega Ranged Creep Crystal</p>
+                     <p>Mega creep, Crystal, Assassin</p>
+                </a>
+            </div>
+
+
+            
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Sniper</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Radiant Catapult</p>
+                     <p>Mega creep, Catapult, Creep Siege</p>
+                </a>
+            </div>
+
+
+
+            
+            
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Ancient Apparition</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Radiant Mega Melee Creep Crystal</p>
+                     <p>Mega creep, Crystal, Defender</p>
+                </a>
+            </div>
+
+
+
+            
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Windrunner</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Radiant Mega Ranged Creep Crystal</p>
+                     <p>Mega creep, Crystal, Fighter</p>
+                </a>
+            </div>
+
+
+
+            
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Lifestealer</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Melee Creep Crystal</p>
+                     <p>Mega creep, Crystal, Fighter</p>
+                </a>
+            </div>
+
+
+
+             
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Lifestealer</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Mega Ranged Creep Crystal</p>
+                     <p>Mega creep, Crystal, Assassin</p>
+                </a>
+            </div>
+
+
+                   
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Techies</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Catapult Creep</p>
+                     <p>Mega creep, Catapult, Creep Siege</p>
+                </a>
+            </div>
+
+              
+               <div class="hero">
+                <a href="#wraith-king">
+                     <p>Shadow Demon</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Ranged Mega Creep</p>
+                     <p>Mega creep, Shadow, Demon</p>
+                </a>
+            </div>
+
+
+            <div class="hero">
+                <a href="#wraith-king">
+                     <p>Rubick</p>
+                    <img src="https://via.placeholder.com/100" alt="Wraith King">
+                    <p>Dire Catapult</p>
+                     <p>Catapult***, Morph, Rubick</p>
+                </a>
+            </div>
+
+            
+         
+
+
+            
+         
+
+
+            
+
+
+
+
+
+
+
+
+
+            
+        </section>
+        
+        <section id="Intelligence">
+            <h2>Intelligence</h2>
+			
+			<div class="hero">
+                <a href="#zeus">
+                    <img src="https://via.placeholder.com/100" alt="Zeus">
+                    <p>Zeus - Thunder God</p>
+                </a>
+            </div>
+            
+			</section>
+
+       
+
+        <section id="links">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://www.dota2.com" target="_blank">Official Dota 2 Website</a></li>
+                <li><a href="https://www.moddb.com/mods/dota-2-mod-heroes-replaced-with-creeps" target="_blank">Dota 2 Mod on ModDB</a></li>
+                <li><a href="https://steamcommunity.com/app/570" target="_blank">Dota 2 Steam Community</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
+
+
+
+
+// auto checkers Game
+
+// creeps instead of heroes with creeps Alliances
+
+  
+
+Auto Checkers Custom Game idea
+Basically Auto Chess but instead of picking from a pool of heroes, you can pick from the pool of creeps.
+
+New alliances/synergies
+
+New metas
+
+New strategies
+
+
+For example:
+
+
+Troll synergy with the troll camps
+
+Harpy synergy with the Harpy camp and Harpy ancient creep
+
+Ancient synergy with all Ancients
+
+Tormentor synergy
+
+Roshan synergy
+
+Yearbeast synergy
+
+Vhoul synergy
+
+Ghost synergy
+
+Easy camp synergy
+
+Hard camp synergy
+
+Centaur synergy
+
+Mud golem synergy
+
+Kobold synergy
+
+Skeleton warrior synergy
+
+Lane creep synergy
+
+Summoned creep synergy
+
+Necronomicon synergy
+
+
+Eidolon synergy- perhaps with different eidolon skins
+
+Beastmaster boar synergy
+
+Beastmaster hawk synergy
+
+Invoker forged spirit synergy
+
+
+
+
+
+
+
+_____________________________________
+
+test
