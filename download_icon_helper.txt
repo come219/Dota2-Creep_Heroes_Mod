@@ -1,0 +1,24 @@
+curl -o Giant_Wolf_icon_dota2_gameasset.png https://liquipedia.net/commons/images/8/86/Giant_Wolf_icon_dota2_gameasset.png
+
+https://liquipedia.net/commons/images/5/53/Kobold_icon_dota2_gameasset.png
+
+
+curl -o Kobold_icon_dota2_gameasset.png https://liquipedia.net/commons/images/5/53/Kobold_icon_dota2_gameasset.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![Kobold](https://static.wikia.nocookie.net/dota2_gamepedia/images/4/49/Kobold_icon.png)
+
+
+https://static.wikia.nocookie.net/dota2_gamepedia/images/4/49/Kobold_icon.png/revision/latest?cb=20170416183011
